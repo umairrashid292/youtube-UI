@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css" integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <style>
+       .navbar{
+        position: fixed;
+    top: 0; left: 0; right: 0;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+        background: #fff;
+        border-bottom: 1px solid #e0e0e0;
+       }
+       .logo{
+        font-size: 20px;
+        font-weight: bold;
+       }
+       .logo span{
+        color: red;
+       }
+       .search-box input{
+        padding: 8px 14px;
+        width: 350px;
+        border: 1px solid #ccc;
+        outline: none;
+       }
+       .nav-icons{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+       }
+       .avatar{
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background-color: #7b2ff7;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+       }
+       .container{
+        display: flex;
+        height: calc(100vh-60px);
+         
+    position: fixed;
+    top: 60px; left: 0; right: 0; bottom: 0
+       }
+       .sidebar{
+        width: 220px;
+        background: #fff;
+        border-right: 1px solid #eee;
+        overflow-y: scroll;
+        padding: 10px;
+       }
+       .sidebar ul{
+        list-style: none;
+       }
+       .sidebar li{
+        padding: 12px 10px;
+        border-radius: 8px;
+        font-size: 18px;
+       }
+       .sidebar a{
+        text-decoration:none ;
+        color: black;
+       }
+       .sidebar i{
+        padding-right: 15px;
+       }
+        .sidebar li:hover { 
+            background: #f2f2f2;
+         }
+        .sidebar hr {
+             border: none;
+              border-top: 1px solid #eee;
+               margin: 10px 0;
+             }
+             .content{
+              flex: 1;
+              overflow-y: scroll;
+              padding: 20px;
+             }
+             .video-grid{
+              display: grid;
+              grid-template-columns: repeat(auto-fill,minmax(340px, 1fr));
+              gap: 20px;
+             }
+            
+             .video-info { 
+              display: flex;
+               gap: 10px;
+                margin-top: 8px; }
+  .video-text .title {
+     font-size: 14px;
+      font-weight: 600;
+       margin-bottom: 4px; }
+  .video-text .meta { 
+    font-size: 12.5px;
+     color: #606060; }
+    </style>
+</head>
+<body>
+  
+  <div class="navbar">
+    <div class="logo"><i class="fa-brands fa-youtube"></i><span>YouTube</span></div>
+    <div class="search-box">
+      <input type="text" placeholder="Search">
+    </div>
+    <div class="nav-icons">
+      <span><i class="fa-solid fa-bell"></i></span>
+      <div class="avatar">U</div>
+    </div>
+  </div>
+    </div>
+
+    <div class="container">
+        <div class="sidebar">
+            <ul>
+                <li><a href="#"><i class="fa-solid fa-house-user"></i>Home</a></li>
+                <li><a href="#"><i class="fa-brands fa-youtube-shorts"></i>Shorts</a></li>
+            </ul>
+            <hr>
+            <ul>
+                <li><a href="#"><i class="fa-solid fa-book-open"></i>Library</a></li>
+                <li><a href="#"><i class="fa-solid fa-clock-rotate-left"></i>History</a></li>
+                <li><a href="#"><i class="fa-solid fa-video"></i>Your Videos</a></li>
+                <li><a href="#"><i class="fa-regular fa-clock"></i>Watch Later</a></li>
+                <li><a href="#"><i class="fa-solid fa-link"></i>Linked Videos</a></li>
+            </ul>
+            <hr>
+            <ul>
+                <li><a href="">Education</a></li>
+                <li><a href="">Movies</a></li>
+                <li><a href="">Music</a></li>
+                <li><a href="">Gaming</a></li>
+                <li><a href="">News</a></li>
+                <li><a href="">Sports</a></li>
+                <li><a href="">Cooking</a></li>
+                <li><a href="">Fashion</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="video-grid">
+                  <div class="video-card">
+          <img src="https://picsum.photos/id/10/400/225" alt="thumbnail">
+          <div class="video-info">
+            <img class="channel-avatar" src="https://picsum.photos/id/64/50/50" alt="channel">
+            <div class="video-text">
+              <div class="title">Learn HTML & CSS in 1 Hour</div>
+              <div class="meta">CodeWithUmair</div>
+              <div class="meta">245K views • 2 days ago</div>
+            </div>
+          </div>
+            </div>
+            <div class="video-card">
+          <img src="https://picsum.photos/id/10/400/225" alt="thumbnail">
+          <div class="video-info">
+            <img class="channel-avatar" src="https://picsum.photos/id/64/50/50" alt="channel">
+            <div class="video-text">
+              <div class="title">Learn HTML & CSS in 1 Hour</div>
+              <div class="meta">CodeWithUmair</div>
+              <div class="meta">245K views • 2 days ago</div>
+            </div>
+          </div>
+         </div>
+            <div class="video-card">
+          <img src="https://picsum.photos/id/10/400/225" alt="thumbnail">
+          <div class="video-info">
+            <img class="channel-avatar" src="https://picsum.photos/id/64/50/50" alt="channel">
+            <div class="video-text">
+              <div class="title">Learn HTML & CSS in 1 Hour</div>
+              <div class="meta">CodeWithUmair</div>
+              <div class="meta">245K views • 2 days ago</div>
+            </div>
+          </div>
+          </div>
+            <div class="video-card">
+          <img src="https://picsum.photos/id/10/400/225" alt="thumbnail">
+          <div class="video-info">
+            <img class="channel-avatar" src="https://picsum.photos/id/64/50/50" alt="channel">
+            <div class="video-text">
+              <div class="title">Learn HTML & CSS in 1 Hour</div>
+              <div class="meta">CodeWithUmair</div>
+              <div class="meta">245K views • 2 days ago</div>
+            </div>
+          </div>
+           </div>
+            <div class="video-card">
+          <img src="https://picsum.photos/id/10/400/225" alt="thumbnail">
+          <div class="video-info">
+            <img class="channel-avatar" src="https://picsum.photos/id/64/50/50" alt="channel">
+            <div class="video-text">
+              <div class="title">Learn HTML & CSS in 1 Hour</div>
+              <div class="meta">CodeWithUmair</div>
+              <div class="meta">245K views • 2 days ago</div>
+            </div>
+          </div>
+          </div>
+            <div class="video-card">
+          <img src="https://picsum.photos/id/10/400/225" alt="thumbnail">
+          <div class="video-info">
+            <img class="channel-avatar" src="https://picsum.photos/id/64/50/50" alt="channel">
+            <div class="video-text">
+              <div class="title">Learn HTML & CSS in 1 Hour</div>
+              <div class="meta">CodeWithUmair</div>
+              <div class="meta">245K views • 2 days ago</div>
+            </div>
+          </div>
+        </div>
+            <div class="video-card">
+          <img src="https://picsum.photos/id/10/400/225" alt="thumbnail">
+          <div class="video-info">
+            <img class="channel-avatar" src="https://picsum.photos/id/64/50/50" alt="channel">
+            <div class="video-text">
+              <div class="title">Learn HTML & CSS in 1 Hour</div>
+              <div class="meta">CodeWithUmair</div>
+              <div class="meta">245K views • 2 days ago</div>
+            </div>
+          </div>
+        </div>
+        <div class="video-card">
+          <img src="https://picsum.photos/id/10/400/225" alt="thumbnail">
+          <div class="video-info">
+            <img class="channel-avatar" src="https://picsum.photos/id/64/50/50" alt="channel">
+            <div class="video-text">
+              <div class="title">Learn HTML & CSS in 1 Hour</div>
+              <div class="meta">CodeWithUmair</div>
+              <div class="meta">245K views • 2 days ago</div>
+            </div>
+          </div>
+           </div>
+            <div class="video-card">
+          <img src="https://picsum.photos/id/10/400/225" alt="thumbnail">
+          <div class="video-info">
+            <img class="channel-avatar" src="https://picsum.photos/id/64/50/50" alt="channel">
+            <div class="video-text">
+              <div class="title">Learn HTML & CSS in 1 Hour</div>
+              <div class="meta">CodeWithUmair</div>
+              <div class="meta">245K views • 2 days ago</div>
+            </div>
+          </div>
+        </div>
+    </div>
+    </div>
+    </div>
+</body>
+</html>
